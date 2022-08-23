@@ -9,11 +9,11 @@ session_start();
 
 $dataService = DataService::Configure(array(
     'auth_mode' => 'oauth2',
-    'ClientID' => $config['client_id'],
-    'ClientSecret' =>  $config['client_secret'],
-    'RedirectURI' => $config['oauth_redirect_uri'],
-    'scope' => $config['oauth_scope'],
-    'baseUrl' => "development"
+    'ClientID' => $config['ABDHsA3LlfKpwbQYqre8Y5TXv3U4OzaJ7abyYT8gW9dOaV2iFS'],
+    'ClientSecret' =>  $config['RZSK8uiJwrBLEitTlkgzrJTc7y2nTUoZCW0rerf6'],
+    'RedirectURI' => $config['http://localhost:3000/callback.php'],
+    'scope' => $config['com.intuit.quickbooks.accounting'],
+    'baseUrl' => "https://sandbox-quickbooks.api.intuit.com"
 ));
 
 $OAuth2LoginHelper = $dataService->getOAuth2LoginHelper();

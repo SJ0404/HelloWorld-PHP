@@ -16,13 +16,17 @@ function makeAPICall()
         'ClientSecret' =>  $config['client_secret'],
         'RedirectURI' => $config['oauth_redirect_uri'],
         'scope' => $config['oauth_scope'],
-        'baseUrl' => "development"
+        'baseUrl' => "development",
+        'access token'  =>$config['Access token'],
+      'realmId'  => $config['realmId'],
+      'refresh_token'=>$config['refresh_token'],
+      'authorization code'=> $config['authorization code'],
     ));
 
     /*
      * Retrieve the accessToken value from session variable
      */
-    $accessToken = $_SESSION['sessionAccessToken'];
+    $accessToken = $_SESSION['Access token'];
 
     /*
      * Update the OAuth2Token of the dataService object
